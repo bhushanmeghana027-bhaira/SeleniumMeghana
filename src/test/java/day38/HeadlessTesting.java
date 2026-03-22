@@ -1,4 +1,4 @@
-package day21;
+package day38;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 //3] Validate ttitle should be "Automation Exercise"
 //4] close browser
 
-public class FirstTestCase {
+public class HeadlessTesting {
 
 	public static void main(String[] args) {
 //		
@@ -36,9 +36,27 @@ public class FirstTestCase {
 ////        4th step close url
 //        
 //        driver.close();
-//		now same thing using headless testing
+//		
+//		
 		
-	
+//		 now same thing by headless testing
+		ChromeOptions xo = new ChromeOptions();
+		xo.addArguments("--headless=new");
+		WebDriver driver = new ChromeDriver(xo);
+		driver.manage().window().maximize();
+      driver.get("https://automationexercise.com/");
+      String actual_title_from_page = driver.getTitle();
+    if(actual_title_from_page.equals("Automation Exercise")) {
+    	System.out.println("Expected actual title are same");
+    }
+    else {
+    	System.out.println("u r not same ");
+    }
+    driver.close();
+		
+		
+		
+		
 
 	}
 
