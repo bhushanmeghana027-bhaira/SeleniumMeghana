@@ -1,0 +1,126 @@
+Nice 😎 this is exactly how you should remember assertions.
+
+Let’s extend your list 👇
+
+---
+
+# 🔥 if-else ➝ Assert Mapping Cheat Sheet
+
+```text
+if(condition) 
+→ Assert.assertTrue(condition)
+
+if(!condition) 
+→ Assert.assertFalse(condition)
+
+if(a == b) 
+→ Assert.assertEquals(a, b)
+
+if(a != b) 
+→ Assert.assertNotEquals(a, b)
+```
+
+---
+
+## 🔹 Null checks
+
+```text
+if(obj == null) 
+→ Assert.assertNull(obj)
+
+if(obj != null) 
+→ Assert.assertNotNull(obj)
+```
+
+---
+
+## 🔹 Boolean checks
+
+```text
+if(flag == true) 
+→ Assert.assertTrue(flag)
+
+if(flag == false) 
+→ Assert.assertFalse(flag)
+```
+
+---
+
+## 🔹 String checks
+
+```text
+if(str1.equals(str2)) 
+→ Assert.assertEquals(str1, str2)
+
+if(!str1.equals(str2)) 
+→ Assert.assertNotEquals(str1, str2)
+```
+
+---
+
+## 🔹 Contains check
+
+```text
+if(str.contains("abc")) 
+→ Assert.assertTrue(str.contains("abc"))
+```
+
+---
+
+## 🔹 WebElement (Selenium)
+
+```text
+if(element.isDisplayed()) 
+→ Assert.assertTrue(element.isDisplayed())
+
+if(!element.isDisplayed()) 
+→ Assert.assertFalse(element.isDisplayed())
+```
+
+---
+
+## 🔹 Title / URL
+
+```text
+if(driver.getTitle().equals("OrangeHRM")) 
+→ Assert.assertEquals(driver.getTitle(), "OrangeHRM")
+
+if(driver.getCurrentUrl().contains("login")) 
+→ Assert.assertTrue(driver.getCurrentUrl().contains("login"))
+```
+
+---
+
+# 💥 Bonus (with message)
+
+```java
+Assert.assertEquals(actual, expected, "Values are not matching");
+```
+
+👉 If fails:
+
+```text
+Values are not matching ❌
+```
+
+---
+
+# 🧠 Final Memory Trick
+
+```text
+if → thinking
+Assert → verifying
+```
+
+---
+
+# 🚀 Interview line
+
+```text
+Every if condition in testing should be converted into assertion.
+```
+
+---
+
+If you want next:
+👉 I can give **mini test where you convert if-else to assert (super useful practice 😎)**
